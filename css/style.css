@@ -1,0 +1,656 @@
+:root {
+  --main-color: #080c50;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+/* navbar start */
+.nav {
+  display: flex;
+  width: 100%;
+  height: 60px;
+}
+.nav h2 {
+  color: var(--main-color);
+  width: 50%;
+  padding: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.nav .blue {
+  width: 50%;
+  background-color: var(--main-color);
+}
+.nav .blue ul {
+  list-style: none;
+  padding: 20px;
+  width: 90%;
+  position: relative;
+}
+.nav .blue ul::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-right: 60px solid var(--main-color);
+  border-bottom: 60px solid transparent;
+  border-left: 60px solid transparent;
+  position: absolute;
+  top: 0;
+  right: 100%;
+}
+.nav .blue ul li {
+  display: inline-block;
+}
+.nav .blue ul li a {
+  margin-right: 20px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav i {
+  background-color: var(--main-color);
+  width: 10%;
+  height: 60px;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  display: inline-block;
+}
+/* navbar end */
+
+/* slider start */
+.container {
+  width: 1170px;
+  margin: auto;
+}
+.container .slider {
+  margin-top: 25px;
+  width: 100%;
+  height: 480px;
+  position: relative;
+}
+.container .slider::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  position: absolute;
+  opacity: 0.5;
+  z-index: -1;
+}
+.container .slider img {
+  width: 100%;
+  height: 480px;
+  position: absolute;
+  z-index: -2;
+}
+.container .slider h2 {
+  color: #fff;
+  text-transform: uppercase;
+  margin: auto;
+  padding-top: 50px;
+  width: 350px;
+  font-size: 70px;
+  font-weight: 200;
+}
+.container .slider .slider-btn {
+  width: 100%;
+}
+.container .slider .slider-btn button {
+  width: 45px;
+  height: 45px;
+  background-color: #fff;
+  border: none;
+  font-size: 25px;
+  color: var(--main-color);
+  float: left;
+  cursor: pointer;
+  text-align: center;
+}
+.container .slider .slider-btn button:last-of-type {
+  float: right;
+}
+/* slider end */
+
+/* float contant start */
+.container .contact-us {
+  z-index: 5;
+  background-color: #fff;
+  width: 70%;
+  margin: auto;
+  padding: 35px;
+  margin-top: -200px;
+  position: relative;
+}
+.container .contact-us img {
+  width: 100%;
+  margin: auto;
+  display: block;
+  margin-bottom: 100px;
+}
+.container .contact-us button {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #111;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  width: 150px;
+  height: 40px;
+  font-weight: 100;
+  text-align: center;
+}
+/* float contant end */
+
+/* get in touch start */
+.container .get-in-touch {
+  width: 50%;
+  margin: auto;
+  margin-top: 100px;
+}
+.container .get-in-touch .img {
+  position: relative;
+}
+.container .get-in-touch img {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.container .get-in-touch .img-1,
+.img-2,
+.img-3 {
+  position: relative;
+  overflow: hidden;
+}
+.container .get-in-touch .img-1:before,
+.img-2:before,
+.img-3:before {
+  content: "";
+  width: 90%;
+  height: 90%;
+  background-color: var(--main-color);
+  opacity: 0.75;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .get-in-touch .img-2:before,
+.img-3:before {
+  background-color: #fff;
+}
+
+.container .get-in-touch a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 25px;
+  text-align: center;
+  color: #111;
+}
+.container .get-in-touch .img-1 a {
+  color: #fff;
+}
+.container .get-in-touch a:hover {
+  scale: 1.1;
+  transform: translate(-45%, -45%);
+  transition: all 0.3s ease-in-out;
+}
+/* get in touch end */
+
+/* blogs start */
+.blogs .container {
+  margin-top: 150px;
+}
+.blogs .container .blog {
+  width: 60%;
+  float: left;
+  margin: 0 30px 50px 50px;
+  position: relative;
+}
+.blogs .container .blog img {
+  width: 100%;
+  height: 100%;
+}
+.blogs .container .blog .heart {
+  color: #000;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  padding: 13px;
+  border-radius: 50%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  cursor: pointer;
+}
+.blogs .container .blog .heart.heart:hover {
+  background-color: #ed0000;
+  color: #fff;
+  box-shadow: 0 1px 7px #666;
+  transition: all 0.3s ease-in-out;
+}
+.blogs .container .blog h6,
+span {
+  margin: 10px 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: #888;
+}
+.blogs .container .blog h2 {
+  text-transform: capitalize;
+  font-size: 35px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.blogs .container .blog p {
+  font-size: 16px;
+  letter-spacing: 0.1px;
+  color: #222;
+  line-height: 16px;
+}
+.blogs .container .blog ul {
+  display: flex;
+  list-style: none;
+  margin-top: 50px;
+  width: 50%;
+  float: left;
+}
+.blogs .container .blog ul li a {
+  color: #000;
+  margin-right: 15px;
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+.blogs .container .blog button {
+  margin-top: 50px;
+  float: right;
+}
+.blogs .container .btn {
+  background-color: transparent;
+  border: none;
+  color: var(--main-color);
+  font-weight: 400;
+  cursor: pointer;
+}
+
+/* side */
+
+.blogs .container .side {
+  height: 675px;
+}
+.blogs .container .side h3 {
+  text-transform: capitalize;
+  font-size: 20px;
+  margin: 10px 0;
+}
+.blogs .container .side p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 10px;
+}
+.blogs .container .side h4,
+h5 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 150px;
+}
+.blogs .container .side ul {
+  display: flex;
+  list-style: none;
+  width: 150px;
+  margin: auto;
+  border-top: 1px solid;
+}
+.blogs .container .side ul li {
+  margin: auto;
+  margin-top: 20px;
+  padding: 5px;
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+}
+.blogs .container .side ul li a {
+  color: #fff;
+}
+.blogs .container .side h5 {
+  margin-bottom: 20px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+.blogs .container .side input {
+  width: 250px;
+  height: 30px;
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+  border: none;
+  outline: 2px solid;
+  outline-color: #ccc;
+  border-radius: 2px;
+  padding-left: 10px;
+  color: #777;
+}
+.blogs .container .side input:placeholder-shown {
+  text-transform: capitalize;
+  padding-left: 10px;
+}
+.blogs .container .side .subscribe {
+  width: 120px;
+  height: 35px;
+  margin: auto;
+  display: flex;
+  padding: 9px 27px;
+  text-transform: capitalize;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 2px;
+  margin-top: 20px;
+  box-shadow: 0 5px 7px #999;
+}
+.blogs .container .side .subscribe:focus {
+  box-shadow: 0 0 7px #fff;
+  transform: scale(0.95);
+  transition: all.5s ease-in-out;
+}
+.blogs .container .side .post {
+  display: flex;
+}
+.blogs .container .side .post img {
+  height: 100%;
+  margin-right: 10px;
+}
+.blogs .container .side .post .post-txt {
+  margin: -15px 0 15px;
+}
+.blogs .container .side .post .post-txt h3 {
+  font-weight: 700;
+  color: #222;
+}
+.blogs .container .side .post .post-txt p {
+  font-size: 12px;
+}
+/* blogs end */
+
+/* tags start */
+.container .tags {
+  width: 100%;
+}
+.tags h2 {
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: 25px;
+  color: #0e0e0e;
+  text-transform: uppercase;
+}
+.tags button {
+  padding: 10px 30px;
+  background-color: #e6e7ec;
+  color: #555;
+  border: none;
+  margin: 5px 2px;
+  font-size: 20px;
+  text-transform: capitalize;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.tags .active {
+  background-color: var(--main-color);
+  color: #ccc;
+}
+/* tags end */
+
+/* numbera start */
+.numbers {
+  margin-top: 150px;
+}
+.numbers span {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  display: inline-block;
+  background-color: #e6e7ec;
+  color: #333;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  padding: 13px 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.numbers .active {
+  background-color: #ed0000;
+  color: #eee;
+}
+
+.numbers i {
+  font-size: 25px;
+  background-color: transparent;
+  height: 50px;
+  width: 50px;
+  color: #777;
+  display: inline-block;
+  cursor: pointer;
+}
+/* numbera end */
+
+/* contact us start */
+.contact {
+  display: flex;
+  width: 100%;
+  margin-top: 150px;
+}
+.contact .contact-img {
+  width: 50%;
+  float: left;
+}
+.contact .contact-img img {
+  width: 100%;
+}
+
+.contact .contact-input {
+  align-items: center;
+  color: #0e0e0e;
+  margin: auto;
+  margin-left: 80px;
+  width: 50%;
+}
+.contact .contact-input h2 {
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+.contact .contact-input input {
+  width: 75%;
+  margin-bottom: 20px;
+  height: 35px;
+  border-radius: 2px;
+  display: block;
+  border: none;
+  box-shadow: 0 0 15px #999;
+  padding-left: 10px;
+  font-weight: 400;
+  color: #777;
+}
+.contact .contact-input input:placeholder-shown {
+  text-transform: capitalize;
+  padding-left: 10px;
+  font-weight: 400;
+  opacity: 0.7;
+}
+.contact .contact-input input[type="message"] {
+  height: 70px;
+}
+.contact .contact-input button {
+  height: 35px;
+  width: 80px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  box-shadow: 0 5px 15px #999;
+  color: #eee;
+  background-color: #fe9901;
+  cursor: pointer;
+}
+/* contact us end */
+
+/* footer start */
+.footer {
+  margin-top: 80px;
+  width: 100%;
+  background-color: #171717;
+  color: #fff;
+  text-align: center;
+}
+.footer .container {
+  width: 30%;
+  border-bottom: 1px solid #999;
+  padding-bottom: 40px;
+}
+.footer .container h1 {
+  padding: 40px 0;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: 600;
+}
+.footer .container ul {
+  list-style-type: none;
+}
+.footer .container ul li {
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-right: 15px;
+}
+.footer .container ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 100;
+  text-transform: capitalize;
+}
+.footer .container i {
+  width: 100%;
+  padding-top: 20px;
+}
+.footer .container span {
+  text-transform: uppercase;
+}
+.footer .container span,
+h6 {
+  color: #999;
+}
+footer {
+  padding: 20px 0;
+  text-transform: capitalize;
+  color: #ccc;
+}
+/* footer end */
+/* *** resposive design *** */
+/* *** tablet design *** */
+@media (max-width: 1080px) {
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .nav .blue ul li a {
+    margin-right: 0;
+    font-size: 14px;
+    text-transform: capitalize;
+  }
+  .nav .blue ul li:not(:last-of-type) a {
+    margin-right: 5px;
+  }
+  .footer .container {
+    width: 100%;
+  }
+  footer {
+    padding: 10px 0;
+    font-size: 12px;
+    width: 100%;
+  }
+}
+/* *** mobile design *** */
+@media (max-width: 479px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+    overflow: hidden;
+  }
+  .nav ul li a {
+    display: none;
+  }
+  .container .slider {
+    height: 240px;
+  }
+  .container .slider h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+  .container .slider .slider-btn {
+    display: none;
+  }
+  .container .get-in-touch {
+    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+    padding: 0 15px;
+  }
+  .blogs .container .blog {
+    float: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: fit-content;
+    margin-bottom: 80px;
+  }
+  .blogs .container .side {
+    float: none;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    height: fit-content;
+  }
+  .blogs .container .side:nth-of-type(2) {
+    display: none;
+  }
+  .blogs .container .blog .heart {
+    top: 45%;
+    left: 50%;
+    filter: drop-shadow(0 0 5px #00000050);
+  }
+  .contact {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 150px;
+  }
+  .contact .contact-img,
+  .contact .contact-input {
+    width: 100%;
+    float: none;
+    padding: 0;
+  }
+  .contact .contact-input {
+    margin: 0 50px;
+  }
+  .contact .contact-input button {
+    width: 75%;
+  }
+}
